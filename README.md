@@ -1,6 +1,6 @@
 # react-app-initialisation
 
-This react app intialisation bash shell script automates some of the repetitive tasks that usually follow using the npx-create-react-app command. It has the following features:
+This react app intialisation bash shell script automates some of the repetitive tasks that usually follow using the npx-create-react-app command. It features:
 
 * npx-create-react-app with dynamic app name input - you will be prompted by the script to enter a name for your app
 
