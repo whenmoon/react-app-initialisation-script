@@ -1,35 +1,63 @@
 #!/bin/bash
 
-#create a react app
-npx create-react-app new-react-app
+green=`tput setaf 2`
+reset=`tput sgr0`
 
-#make an alias so you can cd inside a script
-alias src="cd ./new-react-app/src"
+printf "\n"
+printf "\n"
 
-#cd to the alias
+printf "Welcome to the create-react-app initialisation script!\n"
+printf "${green}What would you like to call your new react app?\n"
+
+read -r app_name
+
+printf "\n"
+
+printf "${greeen}CREATING REACT APP.."
+
+printf "\n"
+
+npx create-react-app "${app_name}"
+
+alias src="cd ./${app_name}/src"
+
 src
 
-#remove files
+printf "\n"
+
+printf "${green}Removing App.test.js logo.svg serviceworker.js\n"
+
 rm App.test.js logo.svg serviceworker.js
 
-#make directories
+printf "\n"
+
+printf "${green}Creating containers components and redux directories\n"
+
 mkdir containers components redux
 
 mkdir containers/App
 
-#move files
+printf "\n"
+
+printf "${green}Moving App container\n"
+
+printf "\n"
+
 mv App.js containers/App/App.js
 
 mv App.css containers/App/App.css
 
-#make alias
 alias backToRoot="cd .."
 
-#go to directory
 backToRoot
 
-#open VScode
+printf "${green}Launching VSCode\n"
+
+printf "\n"
 code .
 
-#start the react app
-npm start
+printf "\n"
+
+printf "${green}Please run npm start and write some code :)\n"
+
+printf "\n"
